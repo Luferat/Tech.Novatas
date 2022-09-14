@@ -1,0 +1,20 @@
+body {
+    background-color: aqua;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p, h3 {
+    color: red;
+}
+
+#divazul {
+    color: blue;
+}
+
+.rosa {
+    background-color: pink;
+}
+
+img {
+    width: 400px;
+}
