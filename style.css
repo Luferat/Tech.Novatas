@@ -77,4 +77,48 @@ body {
  * Cabeçalho *
  *************/
 
-/* Logotipo */
+#wrap>header {
+    background-color: rgba(255, 255, 255, 0.908);
+    display: flex;
+    align-items: center;
+}
+
+/* Logotipo usando Font Awesome */
+
+#wrap>header i {
+    font-size: 4rem;
+    color: rgb(255, 160, 255);
+    margin: .25rem .5rem .25rem .25rem;
+    -webkit-text-stroke: 2px rgb(89, 0, 89);
+}
+
+/* Logotipo usando imagem */
+
+#wrap>header img {
+    display: block;
+    height: 3rem;
+    margin: .5rem .5rem .5rem .25rem;
+}
+
+/* Título */
+
+#wrap>header h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0;
+    color: purple;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+/* Slogan */
+
+#wrap>header span {
+    display: block;
+    font-size: .479rem;
+
+    /* Remove o negrito do slogan */
+    font-weight: normal;
+
+    /* Remove a borda do slogan */
+    -webkit-text-stroke: 0px;
+}
