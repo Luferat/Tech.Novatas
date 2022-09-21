@@ -1,6 +1,7 @@
-/**********************************
- * Folha de estilos do aplicativo *
- **********************************/
+/***********************************************
+ * Folha de estilos do aplicativo              *
+ * Referências: https://www.w3schools.com/css/ *
+ ***********************************************/
 
 /***************
  * Reset geral *
@@ -12,7 +13,7 @@
     outline: none;
 }
 
-/* Reset elementos raiz */
+/* Reset dos elementos raiz */
 html, body {
     position: relative;
     padding: 0;
@@ -23,7 +24,7 @@ html, body {
     /* Define a fonte padrão do aplicativo */
     font-family: Verdana, Arial, Helvetica, sans-serif;
 
-    /* Tamanho da fonte padrão → unidade responsiva '1rem'. */
+    /* Tamanho da fonte padrão. Cria a unidade responsiva '1rem'. */
     font-size: 16px;
 }
 
@@ -50,12 +51,16 @@ header, nav, main, article, aside, footer {
     width: 100%;
     height: 100%;
 
-    /* Limita o crescimento horizontal da página em 1080px */
+    /* 
+    Limita o tamanho dro wrap horizontalmente:
+        • Mínimo: 320px - barra de rolagem - espaço de segurança = 280px
+        • Máximo: 1080px (HD) - barra de rolagem - espaço de segurança = 1024px
+    */
+    min-width: 280px;
     max-width: 1024px;
 
-    /* Centraliza */
+    /* Centraliza wrap */
     margin: auto;
-
 }
 
 /* Define o fundo do aplicativo */
@@ -73,7 +78,3 @@ body {
  *************/
 
 /* Logotipo */
-
-header {
-    
-}
