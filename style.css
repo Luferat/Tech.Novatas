@@ -122,3 +122,140 @@ body {
     /* Remove a borda do slogan */
     -webkit-text-stroke: 0px;
 }
+
+/******************
+ * Menu principal *
+ ******************/
+
+#wrap>nav {
+    background-color: rgb(89, 0, 89);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid purple;
+    border-bottom: 1px solid purple;
+}
+
+#wrap>nav a {
+    text-align: center;
+    padding: .5rem;
+    color: rgb(255, 209, 255);
+    transition: .25s;
+}
+
+#wrap>nav a:hover {
+    color: rgb(89, 0, 89);
+    background-color: rgb(255, 209, 255);
+    text-decoration: none;
+}
+
+#wrap>nav a:first-child {
+    margin-right: auto;
+}
+
+#wrap>nav i {
+    font-size: 2rem;
+}
+
+#wrap>nav span {
+    display: block;
+    margin-top: .25rem;
+}
+
+/* Menu principal responsivo */
+
+@media (min-width: 480px) {
+
+    #wrap>nav i {
+        font-size: 1.2rem;
+    }
+
+    #wrap>nav span {
+        display: inline;
+        margin-top: 0;
+    }
+
+}
+
+/************
+ * Conteúdo *
+ ************/
+
+#wrap>main {
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: auto;
+}
+
+#wrap>main article, #wrap>main aside {
+    padding: 0 1rem;
+}
+
+#wrap>main aside {
+    border-top: 3px dotted purple;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: auto;
+}
+
+/* Conteúdo responsivo */
+@media (min-width: 768px) {
+
+    #wrap>main {
+        display: flex;
+    }
+
+    #wrap>main article {
+        flex-grow: 1;
+    }
+
+    #wrap>main aside {
+        border: none;
+        border-left: 3px dotted purple;
+        min-width: 220px;
+        max-width: 220px;
+        overflow: initial;
+    }
+
+}
+
+/**********
+ * Rodapé *
+ **********/
+
+#wrap>footer {
+    background-color: rgb(89, 0, 89);
+    color: rgb(255, 209, 255);
+    border-top: 1px solid purple;
+}
+
+#wrap>footer a {
+    color: rgb(255, 209, 255);
+}
+
+#wrap>footer a:hover {
+    color: rgb(209, 60, 209);
+    text-decoration: none;
+}
+
+#ftop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px dotted rgb(199, 11, 199);
+}
+
+#ftop a {
+    font-size: 1.5rem;
+    padding: .25rem;
+}
+
+#fbottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+}
+
+#fbottom a {
+    display: block;
+    padding: .25rem 0;
+}
