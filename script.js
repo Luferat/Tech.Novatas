@@ -21,11 +21,14 @@
  */
 function runApp() {
 
+    // Carrega a página inicial:
+    loadPage('contacts');
+
     /**
      * jQuery → Quando houver click em um elemento <a>, execute o aplicativo 
      * "routerLink":
      **/
-    $('a').click(routerLink);
+    $(document).on('click', 'a', routerLink);
 
 }
 
@@ -71,10 +74,70 @@ function routerLink() {
     }
 
     /**
+     * Chama o aplicativo que carrega a página solicitada:
+     */
+    loadPage(href);
+
+    /**
      * Encerra o programa retornando "false" (falso) para que a ação do HTML ao
      * clicar no link seja bloqueada:
      **/
     return false;
+}
+
+/**
+ * Aplicativo que carrega os componentes da página solicitada:
+ */
+function loadPage(href) {
+
+    /**
+     * Gera os links para as partes da página:
+     * "page" é um objeto do JavaScript.
+     * Referências:
+     *     • w3schools.com/js/js_objects.asp
+     **/
+    var page = {
+        "html": `/pages/${href}/index.html`,
+        "css": `/pages/${href}/style.css`,
+        "js": `/pages/${href}/script.js`
+    }
+
+    // jQuery → Obtém o arquivo "index.html" da página:
+    $.get(page.html, function (content) {
+
+        // jQuery → Carrega o CSS da página no <head> de "/index.html":
+        $('#pageCSS').attr('href', page.css);
+
+        // jQuery → Mostra o HTML dentro de <main> em "/index.html":
+        $('#content').html(content);
+
+        // jQuery → Executa o JavaScript da página:
+        $.getScript(page.js);
+
+    });
+
+    // Atualiza endereço da página no navegador:
+    // window.history.pushState({}, '', href);
+}
+
+/**
+ * Aplicativo que atualiza o <title> da página:
+ */
+function getTitle(title = '') {
+
+    // Se a variável "title" está vazia (não que usar um título)...
+    if (title == '') {
+
+        // jQuery → O título vai ter o formato "nomeSite .:. sloganSite":
+        $('title').html(`Tech.Novatas .:. Toda mulher é capaz de tudo, inclusive programar.`);
+
+        // Se "title" tem um valor diferente de '':
+    } else {
+
+        // jQuery → O título va ter o formato "nomeSite .:. nomePagina":
+        $('title').html(`Tech.Novatas .:. ${title}`);
+
+    }
 }
 
 // jQuery → Executa aplicativo "runApp" quando o documento estiver pronto:

@@ -1,1 +1,2 @@
-console.log('Página sobre');
+// Altera o <title> da página:
+getTitle('Sobre...');

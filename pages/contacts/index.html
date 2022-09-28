@@ -1,9 +1,36 @@
 <!-- Conteúdo principal -->
 <article>
 
+     <h2>Faça contato</h2>
+     <p>Preencha todos os campos do formulário abaixo e envie para entrar em contato com a equipe do <em>Tech.Novatas</em>.</p>
 
-    <h2>Faça contato</h2>
+     <form action="" method="post" id="contact">
 
+        <p>
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" placeholder="Seu nome completo" required minlength="3">
+        </p>
+
+        <p>
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" placeholder="Seu e-mail principal" required>
+        </p>
+
+        <p>
+            <label for="subject">Assunto:</label>
+            <input type="text" name="subject" id="subject"  placeholder="Assunto do contato" required minlength="5">
+        </p>
+
+        <p>
+            <label for="message">Mensagem:</label>
+            <textarea name="message" id="message" placeholder="Escreva o que quiser" required minlength="5"></textarea>
+        </p>
+        
+        <p>
+            <button type="submit">Enviar</button>
+        </p>
+
+     </form>
 
 </article>
 
